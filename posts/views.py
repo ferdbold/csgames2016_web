@@ -17,3 +17,7 @@ def single(request, post_id):
 	}
 
 	return render(request, 'posts/single.html', context)
+
+def profile(request, user_id):
+	context = {}
+	return render(request, 'posts/profile.html', context)

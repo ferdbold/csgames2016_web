@@ -4,11 +4,18 @@
 <head>
 	<title>Posts</title>
 
-	<link rel="stylesheet" type="text/css" href="{% static 'posts/css/bootstrap.min.css' %}/" />
-	<link rel="stylesheet" type="text/css" href="{% static 'posts/css/bootstrap-theme.min.css' %}/" />
+	<link rel="stylesheet" type="text/css" href="{% static 'posts/css/bootstrap.min.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'posts/css/bootstrap-theme.min.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'posts/css/posts.css' %}" />
 </head>
 <body>
-	{% block content %}{% endblock %}
+	{% include '_nav.html' %}
+
+	<div class="csg-content container">
+		<div class="row">
+			{% block content %}{% endblock %}
+		</div>
+	</div>
 
 	<script type="text/javascript" href="{% static 'posts/js/bootstrap.min.js' %}" />
 </body>
