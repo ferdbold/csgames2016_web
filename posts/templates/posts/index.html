@@ -1,11 +1,15 @@
-{% if latest_posts %}
-    <ul>
-	    {% for post in latest_posts %}
-	        <li>
-				<a href="/{{ post.id }}/"><strong>{{ post.author }}</strong> {{ post.content }}</a>
-			</li>
-	    {% endfor %}
-    </ul>
-{% else %}
-    <p>No posts are available.</p>
-{% endif %}
+{% extends '_layout.html' %}
+
+{% block content %}
+	{% if latest_posts %}
+	    <ul>
+		    {% for post in latest_posts %}
+		        <li>
+					<a href="{% url 'posts:single' post.id %}"><strong>{{ post.author }}</strong> {{ post.content }}</a>
+				</li>
+		    {% endfor %}
+	    </ul>
+	{% else %}
+	    <p>No posts are available.</p>
+	{% endif %}
+{% endblock %}

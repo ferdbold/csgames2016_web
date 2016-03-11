@@ -1,0 +1,15 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<head>
+	<title>Posts</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'posts/css/bootstrap.min.css' %}/" />
+	<link rel="stylesheet" type="text/css" href="{% static 'posts/css/bootstrap-theme.min.css' %}/" />
+</head>
+<body>
+	{% block content %}{% endblock %}
+
+	<script type="text/javascript" href="{% static 'posts/js/bootstrap.min.js' %}" />
+</body>
+</html>
