@@ -6,10 +6,10 @@
 	<div class="col-xs-12">
 		<form method="post" action="{{ euh }}">
 			{% csrf_token %}
-			
+
 			<div class="form-group">
 				<label for="post-title">Post title</label>
-				<input type="email" class="form-control" id="post-title" name="post-title">
+				<input type="text" class="form-control" id="post-title" name="post-title">
 			</div>
 			<div class="form-group">
 				<label for="post-content">Content</label>
