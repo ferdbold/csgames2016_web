@@ -21,3 +21,7 @@ def single(request, post_id):
 def profile(request, user_id):
 	context = {}
 	return render(request, 'posts/profile.html', context)
+
+def new(request):
+	context = {}
+	return render(request, 'posts/new.html', context)
